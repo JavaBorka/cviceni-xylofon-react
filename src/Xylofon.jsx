@@ -21,6 +21,9 @@ export const Xylofon = () => {
 			<div className="xylofon">
 				{kameny.map((kamen) => (
 					<button
+						onClick={() => {
+							setNadpis('Cink!')
+						}}
 						key={kamen}
 						type="button"
 						className="kamen"
