@@ -1,5 +1,6 @@
 import React from 'react'
 import { zahraj } from './zahraj'
+import { useState } from 'react'
 
 
 // 1. Nahraď jednotlivé tlačítka/kameny za výpis pole pomocí `.map`. Použij následující pole `kameny`.
@@ -12,10 +13,11 @@ const kameny = ['C', 'D', 'E', 'F', 'G', 'A', 'B']
 // 6. Zapni si v počítači zvuk a xylofon otestuj.
 
 export const Xylofon = () => {
+	const [nadpis, setNadpis] = useState('Xylofon')
 	
 	return (
 		<>
-			<h1>Xylofon</h1>
+			<h1>{nadpis}</h1>
 			<div className="xylofon">
 				{kameny.map((kamen) => (
 					<button
@@ -25,8 +27,7 @@ export const Xylofon = () => {
 					>
 						{kamen}
 					</button>
-					)
-				)}
+				))}
 			</div>
 		</>
 	)
