@@ -1,6 +1,7 @@
 import React from 'react'
 import { zahraj } from './zahraj'
 
+
 // 1. Nahraď jednotlivé tlačítka/kameny za výpis pole pomocí `.map`. Použij následující pole `kameny`.
 const kameny = ['C', 'D', 'E', 'F', 'G', 'A', 'B']
 
@@ -11,19 +12,21 @@ const kameny = ['C', 'D', 'E', 'F', 'G', 'A', 'B']
 // 6. Zapni si v počítači zvuk a xylofon otestuj.
 
 export const Xylofon = () => {
+	
 	return (
 		<>
 			<h1>Xylofon</h1>
 			<div className="xylofon">
-				<button type="button" className="kamen">
-					C
-				</button>
-				<button type="button" className="kamen">
-					D
-				</button>
-				<button type="button" className="kamen">
-					E
-				</button>
+				{kameny.map((kamen) => (
+					<button
+						key={kamen}
+						type="button"
+						className="kamen"
+					>
+						{kamen}
+					</button>
+					)
+				)}
 			</div>
 		</>
 	)
