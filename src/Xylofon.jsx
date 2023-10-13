@@ -23,6 +23,9 @@ export const Xylofon = () => {
 					<button
 						onClick={(event) => {
 							setNadpis(event.target.textContent)
+							console.log(nadpis)
+							const ton = event.target.textContent
+							zahraj(ton)
 						}}
 						key={kamen}
 						type="button"
@@ -35,3 +38,30 @@ export const Xylofon = () => {
 		</>
 	)
 }
+
+// export const Xylofon = () => {
+// 	const [nadpis, setNadpis] = useState('Xylofon')
+
+// 	return (
+// 		<>
+// 			<h1>{nadpis}</h1>
+// 			<div className="xylofon">
+// 				{kameny.map((kamen) => (
+// 					<button
+// 						type="button"
+// 						className="kamen"
+// 						key={kamen}
+// 						onClick={(event) => {
+// 							// setNadpis('Cink!')
+// 							const ton = event.target.textContent
+// 							setNadpis(ton)
+// 							zahraj(ton)
+// 						}}
+// 					>
+// 						{kamen}
+// 					</button>
+// 				))}
+// 			</div>
+// 		</>
+// 	)
+// }
